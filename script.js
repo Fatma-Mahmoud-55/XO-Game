@@ -54,6 +54,9 @@ function win(num1, num2, num3){
         document.querySelector(".scoreO").style.background="#ff1867"
         document.querySelector(".scoreO").style.boxShadow="#ff1867"
 
+    }else if(scoreO===scoreX){
+        document.querySelector(".scoreO").style.background=""
+        document.querySelector(".scoreX").style.background=""
     }
 }
 function winner(){
