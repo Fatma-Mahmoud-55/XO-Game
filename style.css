@@ -1,0 +1,191 @@
+html{
+    padding-top: 50px;
+    /* background-image:
+    url("https://wallpapercave.com/wp/wp8984722.jpg"); */
+    background-image:
+    url("stars.gif");
+    
+
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ; 
+
+
+}
+.game{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    font-family: system-ui;
+    
+    padding: 10px;
+    font-weight: 500;
+
+    background: rgba(255, 255, 255, 0.2);
+    /* box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.2); */
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+}
+.title{
+    margin:15px 5px ;
+    box-shadow: 0 0 5px cyan, 0 0 15px cyan;
+    color: rgb(88, 110, 122);
+    text-shadow:2px 2px cyan;
+    /* margin: 5px ; */
+    height: 40px;
+    text-align: center;
+    font-weight: 700;
+
+}
+.title span{
+    color: cyan;
+    text-shadow:2px 2px rgb(88, 110, 122);
+
+}
+.square{
+    width: 105px;
+    height: 105px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin:5px;
+    font-size: 50px;
+    color: rgb(157, 152, 152);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.square:hover{
+    background-color: rgb(147, 197, 197);
+    cursor: pointer;
+    box-shadow: 0 0 5px cyan, 0 0 20px cyan;
+    /* pointer-events:none */
+}
+
+.scoreX, .scoreO{
+    background-color: rgb(147, 197, 197);
+    box-shadow: 0 0 5px cyan, 0 0 20px cyan;
+    text-align: center;
+    margin: 90px;
+    padding: 3px;
+    width: 130px;
+
+}
+
+
+.newGameBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+a{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.3s;
+    
+}
+
+a:hover{
+    letter-spacing: 0.25em;
+    background:var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    color: var(--clr);
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+
+a span{
+    position: relative;
+    z-index: 1;
+}
+
+a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+a i::before{
+    content: "";
+    position: absolute;
+    top:-6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.7s;
+}
+
+a:hover i::before{
+    left: 0%;
+    width: 35px;
+    height: 3px;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 40px 39px var(--clr);
+    position: absolute;
+
+}
+a:hover .line::before{
+    left: 0%;
+    width: 35px;
+    
+    height: 3px;
+    box-shadow: -39px 39px  var(--clr);
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* a:hover .line::after{
+    left: 100%;
+    width: 35px;
+    height: 3px;
+    transform: translateX(-50%) rotate(-45deg);
+   
+} */
+
+
+a i::after{
+    content: "";
+    position: absolute;
+    bottom:-6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+ }
+
+a:hover i::after{
+    left: 96%;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%) rotate(-45deg);
+    border-radius: 50%;
+    box-shadow: 40px -39px var(--clr);
+    top: 48px;
+    position: absolute;
+    
+}

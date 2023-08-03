@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>X O</title>
+</head>
+<body>
+    <div class="container">
+         <!--  o score -->
+         <div class="scoreO">
+            <h2>O Score</h2>
+            <h1 id="scoreO">0</h1>
+        </div>
+        <!-- Game -->
+        <div class="game">
+            
+                <h2 class="title">
+                    <span >X O</span>
+                    GAME
+                </h2>
+            <div class="square" id="item1" onclick="game(this.id)"></div>
+            <div class="square" id="item2" onclick="game(this.id)"></div>
+            <div class="square" id="item3" onclick="game(this.id)"></div>
+    
+            <div class="square" id="item4" onclick="game(this.id)"></div>
+            <div class="square" id="item5" onclick="game(this.id)"></div>
+            <div class="square" id="item6" onclick="game(this.id)"></div>
+    
+            <div class="square" id="item7" onclick="game(this.id)"></div>
+            <div class="square" id="item8" onclick="game(this.id)"></div>
+            <div class="square" id="item9" onclick="game(this.id)"></div>
+    
+        </div>
+        <!-- x score -->
+        <div class="scoreX">
+            <h2>X Score</h2>
+            <h1 id="scoreX">0</h1>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="newGameBtns">
+        <a href="#" style="--clr:cyan" onclick="newRound()"><span>New Round</span><i><i class="line"></i></i></a>
+        <a href="#" style="--clr:#6eff3e" onclick="newGame()"><span>New Game</span><i><i class="line"></i></i></a>
+        <!-- <a href="#" style="--clr:#ff1867" onclick="newGame()"><span>New Game</span><i><i class="line"></i></i></a> -->
+        <!-- <a href="#" style="--clr:#6eff3e"><span>next</span><i></i></a> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
